@@ -1,0 +1,104 @@
+/* Basics */
+@page {
+	size: A4;
+	display: block;
+	margin: 15mm;
+}
+html {
+	overflow: visible !important;
+	/*width: 210mm;*/
+	/*height: 296mm;*/
+	margin: 0;
+	display: block;
+}
+body {
+	/*width: 210mm; */
+	/*height: 296mm;*/
+	position: relative;
+	box-sizing: border-box;
+	margin: 0 !important;
+	padding: 0 !important;
+	width: 100% !important;
+	overflow: visible !important;
+	display: block;
+}
+
+/* Mozilla */
+@-moz-document url-prefix() {
+	@page {
+		size: A4;
+		display: block;
+		margin: 15mm 12mm;
+	}
+	body {
+		overflow: visible;
+		-moz-transform: scale(.71);
+		-moz-transform-origin: 0 0;
+		width: 990px!important;
+		height: initial !important;
+	}
+}
+
+/* Components */
+.region {
+	width: 100% !important;
+}
+.container {
+	width: 100% !important;
+}
+
+/* Sticky header */
+.fixed_menu {
+	position: static !important;
+	background-color: transparent !important;
+	box-shadow: none !important;
+}
+.fixed_menu .justify-menu {
+	margin-left: 180px !important;
+	width: auto !important;
+}
+
+/* Toolbar */
+.region-header #toolbar {
+	display: none !important;
+}
+
+/* Product Table */
+.producttable_wrapper {
+	page-break-inside: avoid;
+	page-break-before: always;
+	page-break-after: auto;
+	/*transform: scale(0.9);
+	transform-origin: 0 0;*/
+}
+
+/* Form Button colors */
+form .btn-block {
+	background-color: #e5e5e5 !important;
+	color: white !important;
+}
+form .btn-block.btn-danger {
+	background-color: #d9534f !important;
+	border-color: #d43f3a;
+}
+form .btn-block.btn-warning {
+	background-color: #f47b1f !important;
+	border-color: #eea236;
+}
+form .btn-block.btn-info {
+	background-color: #5bc0de !important;
+	border-color: #46b8da;
+}
+form .btn-block.btn-success {
+	background-color: #5cb85c !important;
+	border-color: #4cae4c;
+}
+form .btn-block.btn-primary {
+	background-color: #1aa5e0 !important;
+	border-color: #357ebd;
+}
+form .btn-block.btn-default {
+	color: #333 !important;
+	background-color: #e5e5e5 !important;
+	border-color: #ccc;
+}
